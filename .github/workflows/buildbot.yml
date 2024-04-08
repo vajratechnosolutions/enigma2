@@ -1,4 +1,4 @@
-name: buildbot
+name: vajratechnosolutions
 
 on:
   push:
