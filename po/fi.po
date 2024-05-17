@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-27 23:35+0000\n"
-"PO-Revision-Date: 2024-03-29 21:30+0200\n"
+"PO-Revision-Date: 2024-05-13 07:23+0300\n"
 "Last-Translator: Orlandox\n"
 "Language-Team: timoj/Kojo/Samzam/Orlandox\n"
 "Language: fi\n"
@@ -894,7 +894,7 @@ msgstr[1] "%d Min"
 msgid "%d Recording"
 msgid_plural "%d Recordings"
 msgstr[0] "%d Tallenne"
-msgstr[1] "%d Tallenteet"
+msgstr[1] "%d Tallennetta"
 
 #. TRANSLATORS: Intermediate scanning result, '%d' channel(s) have been found so far
 #, python-format
@@ -1555,7 +1555,7 @@ msgid "A background update check is in progress, please wait a few minutes and t
 msgstr "Päivityksien taustatarkistus on käynnissä, odota muutama minuutti ja yritä uudelleen."
 
 msgid "A client is streaming from this box!"
-msgstr "Etäasiakas striimmaa tästä laitteesta!"
+msgstr "Etäasiakas suoratoistaa tästä laitteesta!"
 
 #, python-format
 msgid ""
@@ -13546,7 +13546,7 @@ msgstr ""
 "Suomenkielinen käännös: timoj, Kojo, Samzam, Orlandox\n"
 "\n"
 "Ylläpito : Orlandox\n"
-"--- 29.03.2024 ---\n"
+"--- 13.05.2024 ---\n"
 "\n"
 "http://www.huoltovalikko.com"
 
@@ -19408,3 +19408,24 @@ msgstr "USB-lukija 5"
 
 msgid "Hide and confirm invalid key message"
 msgstr "Piilota ja vahvista virheellinen avainviesti"
+
+msgid "Emulator"
+msgstr "Emulaattori"
+
+msgid "Constcw"
+msgstr "Constcw"
+
+msgid "Two lines Alt"
+msgstr "Vaihtoehtoinen kaksi riviä"
+
+msgid "Reader:"
+msgstr "Lukija:"
+
+msgid "One line Alt"
+msgstr "Vaihtoehtoinen yksi rivi"
+
+msgid "PiPZap"
+msgstr "PiP-kanavanvaihto"
+
+msgid "Disable operator profiles"
+msgstr "Poista operaattoriprofiilit käytöstä"

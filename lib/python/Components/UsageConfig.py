@@ -410,7 +410,7 @@ def InitUsageConfig():
 
 	config.usage.hide_zap_errors = ConfigYesNo(default=True)
 	config.usage.hide_ci_messages = ConfigYesNo(default=False)
-	config.usage.show_cryptoinfo = ConfigSelection([("0", _("Off")), ("1", _("One line")), ("2", _("Two lines"))], "2")
+	config.usage.show_cryptoinfo = ConfigSelection([("0", _("Off")), ("1", _("One line")), ("2", _("One line Alt")), ("3", _("Two lines")), ("4", _("Two lines Alt"))], "3")
 	config.usage.show_eit_nownext = ConfigYesNo(default=True)
 	config.usage.show_vcr_scart = ConfigYesNo(default=False)
 	config.usage.pic_resolution = ConfigSelection(default=None, choices=[(None, _("Same resolution as skin")), ("(720, 576)", "720x576"), ("(1280, 720)", "1280x720"), ("(1920, 1080)", "1920x1080")])
@@ -904,6 +904,19 @@ def InitUsageConfig():
 	config.crash.enabledebug = ConfigYesNo(default=False)
 	config.crash.e2_debug_level = ConfigSelection(default=4, choices=[(3, _("No Logs")), (4, _("Debug Logs")), (5, _("Debug+ Logs"))])
 	config.crash.debugloglimit = ConfigSelectionNumber(min=1, max=10, stepwidth=1, default=4, wraparound=True)
+
+	def updateStackTracePrinter(configElement):
+		from Components.StackTrace import StackTracePrinter
+		if configElement.value:
+			if (os.path.isfile("/tmp/doPythonStackTrace")):
+				os.remove("/tmp/doPythonStackTrace")
+			from threading import current_thread
+			StackTracePrinter.getInstance().activate(current_thread().ident)
+		else:
+			StackTracePrinter.getInstance().deactivate()
+
+	config.crash.pystackonspinner = ConfigYesNo(default=True)
+	config.crash.pystackonspinner.addNotifier(updateStackTracePrinter, immediate_feedback=False, initial_call=True)
 
 # Just echo CHANGE var=val for the logger process to find.
 # Send a newline at the start in case some background process hasn't
